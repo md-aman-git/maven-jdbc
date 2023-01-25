@@ -37,6 +37,7 @@ public class App
 				System.out.println(rset.getInt(1) + " - " + rset.getString(2));
 			}
 			connection.close();
+			System.out.println("JDBC demo completed...");
 		} catch(SQLException ex) {
 			System.out.println(ex);
 		}
