@@ -25,17 +25,17 @@ public class App
 			System.out.println("----------------------------------");
 			System.out.println("Fruit names : ");
 			System.out.println("----------------------------------");
+			rset = statement.executeQuery("select * from fruit_table");
 			while(rset.next()) {
 				System.out.println(rset.getInt(1) + " - " + rset.getString(2));
 			}
-			rset = statement.executeQuery("select * from city_table");
 			System.out.println("----------------------------------");
 			System.out.println("City names : ");
 			System.out.println("----------------------------------");
+			rset = statement.executeQuery("select * from city_table");
 			while(rset.next()) {
 				System.out.println(rset.getInt(1) + " - " + rset.getString(2));
 			}
-			rset = statement.executeQuery("select * from fruit_table");
 			connection.close();
 		} catch(SQLException ex) {
 			System.out.println(ex);
