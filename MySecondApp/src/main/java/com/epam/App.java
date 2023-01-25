@@ -18,6 +18,7 @@ public class App
 			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/demodb", "root", "root");
 			Statement statement = connection.createStatement();
 			ResultSet rset = statement.executeQuery("select * from demotable");
+			System.out.println("Person names : ");
 			while(rset.next()) {
 				System.out.println(rset.getInt(1) + " - " + rset.getString(2));
 			}
