@@ -7,6 +7,12 @@ import java.sql.*;
  */
 public class App 
 {
+	static gcd(int a, int b) {
+		if(b == 0) {
+			return a;
+		}
+		return gcd(b, a % b);
+	}
     public static void main( String[] args )
     {
         try {
@@ -36,6 +42,7 @@ public class App
 			while(rset.next()) {
 				System.out.println(rset.getInt(1) + " - " + rset.getString(2));
 			}
+			System.out.println("GCD of 24 & 78 is = " + gcd(24, 78));
 			connection.close();
 			System.out.println("JDBC demo completed...");
 		} catch(SQLException ex) {
