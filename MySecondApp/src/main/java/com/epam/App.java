@@ -22,13 +22,20 @@ public class App
 			while(rset.next()) {
 				System.out.println(rset.getInt(1) + " - " + rset.getString(2));
 			}
-			rset = statement.executeQuery("select * from fruit_table");
 			System.out.println("----------------------------------");
 			System.out.println("Fruit names : ");
 			System.out.println("----------------------------------");
 			while(rset.next()) {
 				System.out.println(rset.getInt(1) + " - " + rset.getString(2));
 			}
+			rset = statement.executeQuery("select * from city_table");
+			System.out.println("----------------------------------");
+			System.out.println("City names : ");
+			System.out.println("----------------------------------");
+			while(rset.next()) {
+				System.out.println(rset.getInt(1) + " - " + rset.getString(2));
+			}
+			rset = statement.executeQuery("select * from fruit_table");
 			connection.close();
 		} catch(SQLException ex) {
 			System.out.println(ex);
